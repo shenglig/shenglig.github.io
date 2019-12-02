@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Shengli&#39;s Blog</title>
+    <link>https://shenglig.github.io/posts/</link>
+    <description>Recent content in Posts on Shengli&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 01 Dec 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://shenglig.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>https://shenglig.github.io/posts/2019-12/common-git/</link>
+      <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://shenglig.github.io/posts/2019-12/common-git/</guid>
+      <description>常用git指令  显示commit日志. git log &amp;ndash;oneline &amp;ndash;abbrev-commit &amp;ndash;all &amp;ndash;graph
+ Commands that affect local branch references include commit merge rebase reset.
+ Commands that affect remote branch references include fetch push.
+ pull command is special case, it combines fetch and either merge or rebase.
+ 一个小的修改不想增加新的commit，可以使用 git commit &amp;ndash;amend .
+ git gc 将遍历所有的branch和tag，删除掉不能达到的commit.
+ git config &amp;ndash;get name 显示配置信息.
+ git branch &amp;ndash;all 显示本地分支和远端分支。
+ git remote 列出所有的远程主机名.</description>
+    </item>
+    
+    <item>
+      <title>Markdown使用笔记</title>
+      <link>https://shenglig.github.io/posts/2019-12/essay/</link>
+      <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://shenglig.github.io/posts/2019-12/essay/</guid>
+      <description>Essay one How to write markdow with vim  Learn five markdown syntax. Install vim-markdown plugin. Prepare one github repository for saving your markdown notebook. Write first markdown notebook, and push to github.  Five markdowm grammar Header Use 1-6 hash characters at the start of the line, corresponding to header levels 1-6 . For Example:
+# Header1 ## Header2 ###### Header6  Blockquotes Can only put &amp;gt; before the first line of a hard-wrapped paragraphy, and it`s can be nested, and can contain any other markdown elements.</description>
+    </item>
+    
+  </channel>
+</rss>

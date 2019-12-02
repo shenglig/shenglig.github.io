@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Shengli&#39;s Blog</title>
+    <link>https://shenglig.github.io/tags/</link>
+    <description>Recent content in Tags on Shengli&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 01 Dec 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://shenglig.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>essay</title>
+      <link>https://shenglig.github.io/tags/essay/</link>
+      <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://shenglig.github.io/tags/essay/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>git</title>
+      <link>https://shenglig.github.io/tags/git/</link>
+      <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://shenglig.github.io/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>git command</title>
+      <link>https://shenglig.github.io/tags/git-command/</link>
+      <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://shenglig.github.io/tags/git-command/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>markdown</title>
+      <link>https://shenglig.github.io/tags/markdown/</link>
+      <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://shenglig.github.io/tags/markdown/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>notes</title>
+      <link>https://shenglig.github.io/tags/notes/</link>
+      <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://shenglig.github.io/tags/notes/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

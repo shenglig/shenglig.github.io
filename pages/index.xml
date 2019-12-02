@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pages on Shengli&#39;s Blog</title>
+    <link>https://shenglig.github.io/pages/</link>
+    <description>Recent content in Pages on Shengli&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://shenglig.github.io/pages/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>https://shenglig.github.io/pages/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://shenglig.github.io/pages/about/</guid>
+      <description>I am shengli, this site is used to share my thought and my life.
+Thanks for visiting, have a nice day.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://shenglig.github.io/pages/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://shenglig.github.io/pages/contact/</guid>
+      <description>Visit my github
+Visit my linkedin</description>
+    </item>
+    
+  </channel>
+</rss>
