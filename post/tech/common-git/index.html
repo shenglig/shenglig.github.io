@@ -50,7 +50,7 @@
 
 <meta itemprop="datePublished" content="2019-12-01T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2019-12-01T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="717">
+<meta itemprop="wordCount" content="719">
 
 
 
@@ -125,7 +125,7 @@
       <div class="post-meta">
         <span class="post-time"> 2019-12-01 </span>
         
-          <span class="more-meta"> 约 717 字 </span>
+          <span class="more-meta"> 约 719 字 </span>
           <span class="more-meta"> 预计阅读 2 分钟 </span>
         
       </div>
@@ -145,7 +145,6 @@
 <li><a href="#从远程主机拉取">从远程主机拉取</a></li>
 <li><a href="#拉取分支并且合并">拉取分支并且合并</a></li>
 <li><a href="#推送修改到远端">推送修改到远端</a></li>
-<li><a href="#创建新分支">创建新分支</a></li>
 <li><a href="#删除远端分支">删除远端分支</a></li>
 <li><a href="#删除本地分支">删除本地分支</a></li>
 <li><a href="#版本回退">版本回退</a></li>
@@ -299,21 +298,16 @@ git push 和git pull 格式能被统一为 git push/pull <远程主机名> <源�
 如果本地分支只有一个远程主机，且待提交分支与远端分支有连接关系可以直接使用。
 
 </div>
-<div class="admonition note"><p class="admonition-title">tips</p>
+<details class="admonition note"><summary class="admonition-title">tips</summary>
   
 使用git push 进行推送的时候，git 2.0之后采用 ‘simple’ 方法，就是只推送当前的分支，另外一种推送的方法叫做 ‘matching’,会将本地所有有关联关系的分支推送到默认的远端主机上去.可以通过 ***git config --global push.default matching*** 指令来设置.
 
-</div>
+</details>
 
-<h1 id="创建新分支">创建新分支</h1>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">git checkout -b newbranch</pre></td></tr></table>
-</div>
-</div>
+# 创建新分支
+```
+git checkout -b newbranch
+```
 <div class="admonition example">
   
 从当前分支创建新的分支,并切换到新分支
