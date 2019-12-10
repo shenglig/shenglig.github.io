@@ -50,7 +50,7 @@
 
 <meta itemprop="datePublished" content="2019-12-01T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2019-12-01T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="866">
+<meta itemprop="wordCount" content="717">
 
 
 
@@ -125,7 +125,7 @@
       <div class="post-meta">
         <span class="post-time"> 2019-12-01 </span>
         
-          <span class="more-meta"> 约 866 字 </span>
+          <span class="more-meta"> 约 717 字 </span>
           <span class="more-meta"> 预计阅读 2 分钟 </span>
         
       </div>
@@ -219,154 +219,126 @@
 <h1 id="从远程主机拉取">从远程主机拉取</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
+<pre class="chroma"><span class="lnt">1
 </span></pre></td>
 <td class="lntd">
-<pre class="chroma">git fetch
-&lt;div class=&#34;admonition example&#34;&gt;
+<pre class="chroma">git fetch</pre></td></tr></table>
+</div>
+</div>
+<div class="admonition example">
   
 拉取所有分支
 
-&lt;/div&gt;
-
-git fetch &lt;远程主机名&gt; &lt;分支名&gt;
-&lt;div class=&#34;admonition example&#34;&gt;
+</div>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">git fetch &lt;远程主机名&gt; &lt;分支名&gt;</pre></td></tr></table>
+</div>
+</div>
+<div class="admonition example">
   
 拉取指定分支代码
 
-&lt;/div&gt;</pre></td></tr></table>
 </div>
-</div>
+
 <h1 id="拉取分支并且合并">拉取分支并且合并</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
 </span></pre></td>
 <td class="lntd">
-<pre class="chroma">git pull &lt;远程主机名&gt; &lt;远程分支名&gt;:&lt;本地分支名&gt;
-&lt;div class=&#34;admonition example&#34;&gt;
+<pre class="chroma">git pull &lt;远程主机名&gt; &lt;远程分支名&gt;:&lt;本地分支名&gt;</pre></td></tr></table>
+</div>
+</div>
+<div class="admonition example">
   
 git pull = git fetch + git merge.但是建议git fetch + git merge，git的过程更加清晰。
 
-&lt;/div&gt;</pre></td></tr></table>
 </div>
-</div>
+
 <h1 id="推送修改到远端">推送修改到远端</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
+<pre class="chroma"><span class="lnt">1
 </span></pre></td>
 <td class="lntd">
-<pre class="chroma">git push &lt;远程主机名&gt; &lt;本地分支名&gt;:&lt;远程分支名&gt;
-&lt;div class=&#34;admonition example&#34;&gt;
+<pre class="chroma">git push &lt;远程主机名&gt; &lt;本地分支名&gt;:&lt;远程分支名&gt;</pre></td></tr></table>
+</div>
+</div>
+<div class="admonition example">
   
-git push 和git pull 格式能被统一为 git push/pull &lt;远程主机名&gt; &lt;源地址&gt;:&lt;目标地址&gt;
+git push 和git pull 格式能被统一为 git push/pull <远程主机名> <源地址>:<目标地址>
 
-&lt;/div&gt;
-
-git push origin master。
-&lt;div class=&#34;admonition example&#34;&gt;
+</div>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">git push origin master。</pre></td></tr></table>
+</div>
+</div>
+<div class="admonition example">
   
 会将本地的master分支上传到远端的关联分支上去.如果远端的分支不存在，则创建同名分支
 
-&lt;/div&gt;
-
- git push
-&lt;div class=&#34;admonition example&#34;&gt;
+</div>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">git push</pre></td></tr></table>
+</div>
+</div>
+<div class="admonition example">
   
 如果本地分支只有一个远程主机，且待提交分支与远端分支有连接关系可以直接使用。
 
-&lt;/div&gt;
-&lt;div class=&#34;admonition note&#34;&gt;&lt;p class=&#34;admonition-title&#34;&gt;tips&lt;/p&gt;
+</div>
+<div class="admonition note"><p class="admonition-title">tips</p>
   
 使用git push 进行推送的时候，git 2.0之后采用 ‘simple’ 方法，就是只推送当前的分支，另外一种推送的方法叫做 ‘matching’,会将本地所有有关联关系的分支推送到默认的远端主机上去.可以通过 ***git config --global push.default matching*** 指令来设置.
 
-&lt;/div&gt;</pre></td></tr></table>
 </div>
-</div>
+
 <h1 id="创建新分支">创建新分支</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
 </span></pre></td>
 <td class="lntd">
-<pre class="chroma">git checkout -b newbranch
-&lt;div class=&#34;admonition example&#34;&gt;
+<pre class="chroma">git checkout -b newbranch</pre></td></tr></table>
+</div>
+</div>
+<div class="admonition example">
   
 从当前分支创建新的分支,并切换到新分支
 
-&lt;/div&gt;</pre></td></tr></table>
 </div>
-</div>
+
 <h1 id="删除远端分支">删除远端分支</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
 </span></pre></td>
 <td class="lntd">
 <pre class="chroma">git push origin :test
 
-git push origin --delete test
-&lt;div class=&#34;admonition example&#34;&gt;
+git push origin --delete test</pre></td></tr></table>
+</div>
+</div>
+<div class="admonition example">
   
 两条指令具有相同的作用，推荐使用后者，语意更加明确
 
-&lt;/div&gt;</pre></td></tr></table>
 </div>
-</div>
+
 <h1 id="删除本地分支">删除本地分支</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -379,50 +351,44 @@ git push origin --delete test
 <h1 id="版本回退">版本回退</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
+<pre class="chroma"><span class="lnt">1
 </span></pre></td>
 <td class="lntd">
-<pre class="chroma">git reset --soft HEAD~
-&lt;div class=&#34;admonition example&#34;&gt;
+<pre class="chroma">git reset --soft HEAD~</pre></td></tr></table>
+</div>
+</div>
+<div class="admonition example">
   
 只修改HEAD. index(暂存区)和working tree(工作区）不变
 
-&lt;/div&gt;
-
-git reset --mixed HEAD~
-&lt;div class=&#34;admonition example&#34;&gt;
+</div>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">git reset --mixed HEAD~</pre></td></tr></table>
+</div>
+</div>
+<div class="admonition example">
   
 修改HEAD和index, working tree不变
 
-&lt;/div&gt;
-
-git reset --hard HEAD~
-&lt;div class=&#34;admonition example&#34;&gt;
+</div>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">git reset --hard HEAD~</pre></td></tr></table>
+</div>
+</div>
+<div class="admonition example">
   
 HEAD, index, working tree 全部修改
 
-&lt;/div&gt;</pre></td></tr></table>
 </div>
-</div>
+
     </div>
 
     <div class="post-copyright">
