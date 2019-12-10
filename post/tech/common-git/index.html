@@ -50,7 +50,7 @@
 
 <meta itemprop="datePublished" content="2019-12-01T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2019-12-01T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="784">
+<meta itemprop="wordCount" content="876">
 
 
 
@@ -125,7 +125,7 @@
       <div class="post-meta">
         <span class="post-time"> 2019-12-01 </span>
         
-          <span class="more-meta"> 约 784 字 </span>
+          <span class="more-meta"> 约 876 字 </span>
           <span class="more-meta"> 预计阅读 2 分钟 </span>
         
       </div>
@@ -136,7 +136,19 @@
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
 <ul>
-<li><a href="#常用git指令">常用git指令</a></li>
+<li><a href="#显示commit日志">显示commit日志.</a></li>
+<li><a href="#将新的修改添加到已经存在的commit">将新的修改添加到已经存在的commit.</a></li>
+<li><a href="#遍历所有的branch和tag-删除掉不能到达的commit">遍历所有的branch和tag，删除掉不能到达的commit.</a></li>
+<li><a href="#查看本地和远端的所有分支">查看本地和远端的所有分支</a></li>
+<li><a href="#查看所有远程仓库">查看所有远程仓库</a></li>
+<li><a href="#查看远程主机的详细信息">查看远程主机的详细信息</a></li>
+<li><a href="#从远程主机拉取">从远程主机拉取</a></li>
+<li><a href="#拉取分支并且合并">拉取分支并且合并</a></li>
+<li><a href="#推送修改到远端">推送修改到远端</a></li>
+<li><a href="#创建新分支">创建新分支</a></li>
+<li><a href="#删除远端分支">删除远端分支</a></li>
+<li><a href="#删除本地分支">删除本地分支</a></li>
+<li><a href="#版本回退">版本回退</a></li>
 </ul>
 </nav>
   </div>
@@ -144,63 +156,277 @@
     <div class="post-content">
       
 
-<h1 id="常用git指令">常用git指令</h1>
-
-<ol>
-<li><p>显示commit日志.
-<strong><em>git log &ndash;oneline &ndash;abbrev-commit &ndash;all &ndash;graph</em></strong></p></li>
-
-<li><p>Commands that affect local branch references include <strong><em>commit</em></strong> <strong><em>merge</em></strong> <strong><em>rebase</em></strong> <strong><em>reset</em></strong>.</p></li>
-
-<li><p>Commands that affect remote branch references include <strong><em>fetch</em></strong> <strong><em>push</em></strong>.</p></li>
-
-<li><p><strong><em>pull</em></strong> command is special case, it combines <strong><em>fetch</em></strong> and either <strong><em>merge</em></strong> or <strong><em>rebase</em></strong>.</p></li>
-
-<li><p>一个小的修改不想增加新的commit，可以使用 <strong><em>git commit &ndash;amend</em></strong> .</p></li>
-
-<li><p><strong><em>git gc</em></strong> 将遍历所有的branch和tag，删除掉不能达到的commit.</p></li>
-
-<li><p><strong><em>git config &ndash;get name</em></strong> 显示配置信息.</p></li>
-
-<li><p><strong><em>git branch &ndash;all</em></strong> 显示本地分支和远端分支。</p></li>
-
-<li><p><strong><em>git remote</em></strong> 列出所有的远程主机名.</p></li>
-
-<li><p><strong><em>git remote show &lsquo;name&rsquo;</em></strong> 显示&rsquo;name&rsquo;主机的详细信息.</p></li>
-
-<li><p><strong><em>git fetch &lt;远程主机名&gt; &lt;分支名&gt;</em></strong> 从远端分支取到最新的代码.</p></li>
-
-<li><p><strong><em>git pull &lt;远程主机名&gt; &lt;远程分支名&gt;:&lt;本地分支名&gt;</em></strong> 从远端分支拉取最新的代码，并且合并到本地的分支.git pull相当于git fetch和git merge的组合.但是建议时候后者，git的过程中最好时有清晰的流程，减少出错.</p></li>
-
-<li><p><strong><em>git checkout -b newbranch</em></strong> 以当前分支建立新的分支.</p></li>
-
-<li><p><strong><em>git reset &ndash;hard</em></strong> 放弃本地代码的修改，回退到上一个版本.</p></li>
-
-<li><p><strong><em>git push &lt;远程主机名&gt; &lt;本地分支名&gt;:&lt;远程分支名&gt;</em></strong> 其中 <strong><em>git pull</em></strong> 指令和 <strong><em>git push</em></strong> 指令都可以统一为
-<strong><em>&lt;来源地&gt;:&lt;目的地&gt;</em></strong>.</p></li>
-
-<li><p><strong><em>git push</em></strong> 指令中的远程分支可以省略，会默认上传到远程和该分支有追踪关系的分支上去.比如
-<strong><em>git push origin master</em></strong> 会将本地的master分支上传到远端的关联分支上去.如果远端的分支不存在，则创建同名分支。</p></li>
-
-<li><p><strong><em>git push origin :test</em></strong> 表示删除远端分支.等同于 <strong><em>git push origin &ndash;delete test</em></strong>.</p></li>
-
-<li><p>如果当前分支和远端分支存在追踪关系，那么本地分支和远端分支都可以省略. <strong><em>git push origin</em></strong>.</p></li>
-
-<li><p>如果当前分支只有一个追踪分支，那么主机名可以省略. <strong><em>git push</em></strong>.</p></li>
-
-<li><p>当使用 <strong><em>git push</em></strong> 去推送分支到远端的时候，在git 2.0之后采用 ‘simple’ 方法，就是只推送当前的分支，另外一种推送的方法叫做 ‘matching’,会将本地所有有关联关系的分支推送到默认的远端主机上去.可以通过 <strong><em>git config &ndash;global push.default matching</em></strong> 指令来设置.</p></li>
-
-<li><p>显示当前远程分支的详细信息。</p>
+<h1 id="显示commit日志">显示commit日志.</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><span class="lnt">1
 </span></pre></td>
 <td class="lntd">
-<pre class="chroma">git remote -v</pre></td></tr></table>
+<pre class="chroma">git log --oneline --abbrev-commit --all --graph</pre></td></tr></table>
 </div>
-</div></li>
-</ol>
+</div>
+<h1 id="将新的修改添加到已经存在的commit">将新的修改添加到已经存在的commit.</h1>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">git commit --amend .</pre></td></tr></table>
+</div>
+</div>
+<h1 id="遍历所有的branch和tag-删除掉不能到达的commit">遍历所有的branch和tag，删除掉不能到达的commit.</h1>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">git gc</pre></td></tr></table>
+</div>
+</div>
+<h1 id="查看本地和远端的所有分支">查看本地和远端的所有分支</h1>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">git branch --all</pre></td></tr></table>
+</div>
+</div>
+<h1 id="查看所有远程仓库">查看所有远程仓库</h1>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">git remote -v
+&lt;div class=&#34;admonition example&#34;&gt;
+  
+-v means verbose(详细的）
 
+&lt;/div&gt;</pre></td></tr></table>
+</div>
+</div>
+<h1 id="查看远程主机的详细信息">查看远程主机的详细信息</h1>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">git remote show &#39;name&#39;</pre></td></tr></table>
+</div>
+</div>
+<h1 id="从远程主机拉取">从远程主机拉取</h1>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">git fetch
+&lt;div class=&#34;admonition example&#34;&gt;
+  
+拉取所有分支
+
+&lt;/div&gt;
+
+git fetch &lt;远程主机名&gt; &lt;分支名&gt;
+&lt;div class=&#34;admonition example&#34;&gt;
+  
+拉取指定分支代码
+
+&lt;/div&gt;</pre></td></tr></table>
+</div>
+</div>
+<h1 id="拉取分支并且合并">拉取分支并且合并</h1>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">git pull &lt;远程主机名&gt; &lt;远程分支名&gt;:&lt;本地分支名&gt;
+&lt;div class=&#34;admonition example&#34;&gt;
+  
+git pull = git fetch + git merge.但是建议git fetch + git merge，git的过程更加清晰。
+
+&lt;/div&gt;</pre></td></tr></table>
+</div>
+</div>
+<h1 id="推送修改到远端">推送修改到远端</h1>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">git push &lt;远程主机名&gt; &lt;本地分支名&gt;:&lt;远程分支名&gt;
+&lt;div class=&#34;admonition example&#34;&gt;
+  
+git push 和git pull 格式能被统一为 git push/pull &lt;远程主机名&gt; &lt;源地址&gt;:&lt;目标地址&gt;
+
+&lt;/div&gt;
+
+git push origin master。
+&lt;div class=&#34;admonition example&#34;&gt;
+  
+会将本地的master分支上传到远端的关联分支上去.如果远端的分支不存在，则创建同名分支
+
+&lt;/div&gt;
+
+ git push
+&lt;div class=&#34;admonition example&#34;&gt;
+  
+如果本地分支只有一个远程主机，且待提交分支与远端分支有连接关系可以直接使用。
+
+&lt;/div&gt;
+&lt;div class=&#34;admonition note&#34;&gt;&lt;p class=&#34;admonition-title&#34;&gt;tips&lt;/p&gt;
+  
+使用git push 进行推送的时候，git 2.0之后采用 ‘simple’ 方法，就是只推送当前的分支，另外一种推送的方法叫做 ‘matching’,会将本地所有有关联关系的分支推送到默认的远端主机上去.可以通过 ***git config --global push.default matching*** 指令来设置.
+
+&lt;/div&gt;</pre></td></tr></table>
+</div>
+</div>
+<h1 id="创建新分支">创建新分支</h1>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">git checkout -b newbranch
+&lt;div class=&#34;admonition example&#34;&gt;
+  
+从当前分支创建新的分支,并切换到新分支
+
+&lt;/div&gt;</pre></td></tr></table>
+</div>
+</div>
+<h1 id="删除远端分支">删除远端分支</h1>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">git push origin :test
+
+git push origin --delete test
+&lt;div class=&#34;admonition example&#34;&gt;
+  
+两条指令具有相同的作用，推荐使用后者，语意更加明确
+
+&lt;/div&gt;</pre></td></tr></table>
+</div>
+</div>
+<h1 id="删除本地分支">删除本地分支</h1>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">git branch -d test</pre></td></tr></table>
+</div>
+</div>
+<h1 id="版本回退">版本回退</h1>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">git reset --soft HEAD~
+&lt;div class=&#34;admonition example&#34;&gt;
+  
+只修改HEAD. index(暂存区)和working tree(工作区）不变
+
+&lt;/div&gt;
+
+git reset --mixed HEAD~
+&lt;div class=&#34;admonition example&#34;&gt;
+  
+修改HEAD和index, working tree不变
+
+&lt;/div&gt;
+
+git reset --hard HEAD~
+&lt;div class=&#34;admonition example&#34;&gt;
+  
+HEAD, index, working tree 全部修改
+
+&lt;/div&gt;</pre></td></tr></table>
+</div>
+</div>
     </div>
 
     <div class="post-copyright">
