@@ -35,7 +35,7 @@
       <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
       
       <guid>https://sscode.top/post/tech/common-git/</guid>
-      <description>显示commit日志. 1 git log --oneline --abbrev-commit --all --graph 将新的修改添加到已经存在的commit. 1 git commit --amend . 遍历所有的branch和tag，删除掉不能到达的com</description>
+      <description>显示commit日志. 1 git log --oneline --abbrev-commit --all --graph 将新的修改添加到已经存在的commit. 1 git commit --amend 遍历所有的branch和tag，删除掉不能到达的comm</description>
     </item>
     
     <item>
