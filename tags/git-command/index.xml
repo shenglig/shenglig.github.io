@@ -13,10 +13,10 @@
     
     <item>
       <title>常用git指令</title>
-      <link>https://sscode.top/post/2019-12/common-git/</link>
+      <link>https://sscode.top/post/tech/common-git/</link>
       <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://sscode.top/post/2019-12/common-git/</guid>
+      <guid>https://sscode.top/post/tech/common-git/</guid>
       <description>常用git指令 显示commit日志. git log &amp;ndash;oneline &amp;ndash;abbrev-commit &amp;ndash;all &amp;ndash;graph Commands that affect local branch references include commit merge rebase reset. Commands that affect remote branch references include fetch push. pull command is special case, it combines fetch and either merge or rebase. 一个小的修改不想增加新的c</description>
     </item>
     

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>常用git指令 - Shengli&#39;s Blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="shengli" /><meta name="description" content="收录日常工作中常用到的git指令" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.59.1 with theme even" />
+
+
+<link rel="canonical" href="https://sscode.top/post/tech/common-git/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="常用git指令" />
+<meta property="og:description" content="收录日常工作中常用到的git指令" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://sscode.top/post/tech/common-git/" />
+<meta property="article:published_time" content="2019-12-01T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-12-01T00:00:00+00:00" />
+<meta itemprop="name" content="常用git指令">
+<meta itemprop="description" content="收录日常工作中常用到的git指令">
+
+
+<meta itemprop="datePublished" content="2019-12-01T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2019-12-01T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="784">
+
+
+
+<meta itemprop="keywords" content="git,git command,notes,tech," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="常用git指令"/>
+<meta name="twitter:description" content="收录日常工作中常用到的git指令"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Shengli&#39;s Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Shengli&#39;s Blog</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">常用git指令</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-12-01 </span>
+        
+          <span class="more-meta"> 约 784 字 </span>
+          <span class="more-meta"> 预计阅读 2 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#常用git指令">常用git指令</a></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      
+
+<h1 id="常用git指令">常用git指令</h1>
+
+<ol>
+<li><p>显示commit日志.
+<strong><em>git log &ndash;oneline &ndash;abbrev-commit &ndash;all &ndash;graph</em></strong></p></li>
+
+<li><p>Commands that affect local branch references include <strong><em>commit</em></strong> <strong><em>merge</em></strong> <strong><em>rebase</em></strong> <strong><em>reset</em></strong>.</p></li>
+
+<li><p>Commands that affect remote branch references include <strong><em>fetch</em></strong> <strong><em>push</em></strong>.</p></li>
+
+<li><p><strong><em>pull</em></strong> command is special case, it combines <strong><em>fetch</em></strong> and either <strong><em>merge</em></strong> or <strong><em>rebase</em></strong>.</p></li>
+
+<li><p>一个小的修改不想增加新的commit，可以使用 <strong><em>git commit &ndash;amend</em></strong> .</p></li>
+
+<li><p><strong><em>git gc</em></strong> 将遍历所有的branch和tag，删除掉不能达到的commit.</p></li>
+
+<li><p><strong><em>git config &ndash;get name</em></strong> 显示配置信息.</p></li>
+
+<li><p><strong><em>git branch &ndash;all</em></strong> 显示本地分支和远端分支。</p></li>
+
+<li><p><strong><em>git remote</em></strong> 列出所有的远程主机名.</p></li>
+
+<li><p><strong><em>git remote show &lsquo;name&rsquo;</em></strong> 显示&rsquo;name&rsquo;主机的详细信息.</p></li>
+
+<li><p><strong><em>git fetch &lt;远程主机名&gt; &lt;分支名&gt;</em></strong> 从远端分支取到最新的代码.</p></li>
+
+<li><p><strong><em>git pull &lt;远程主机名&gt; &lt;远程分支名&gt;:&lt;本地分支名&gt;</em></strong> 从远端分支拉取最新的代码，并且合并到本地的分支.git pull相当于git fetch和git merge的组合.但是建议时候后者，git的过程中最好时有清晰的流程，减少出错.</p></li>
+
+<li><p><strong><em>git checkout -b newbranch</em></strong> 以当前分支建立新的分支.</p></li>
+
+<li><p><strong><em>git reset &ndash;hard</em></strong> 放弃本地代码的修改，回退到上一个版本.</p></li>
+
+<li><p><strong><em>git push &lt;远程主机名&gt; &lt;本地分支名&gt;:&lt;远程分支名&gt;</em></strong> 其中 <strong><em>git pull</em></strong> 指令和 <strong><em>git push</em></strong> 指令都可以统一为
+<strong><em>&lt;来源地&gt;:&lt;目的地&gt;</em></strong>.</p></li>
+
+<li><p><strong><em>git push</em></strong> 指令中的远程分支可以省略，会默认上传到远程和该分支有追踪关系的分支上去.比如
+<strong><em>git push origin master</em></strong> 会将本地的master分支上传到远端的关联分支上去.如果远端的分支不存在，则创建同名分支。</p></li>
+
+<li><p><strong><em>git push origin :test</em></strong> 表示删除远端分支.等同于 <strong><em>git push origin &ndash;delete test</em></strong>.</p></li>
+
+<li><p>如果当前分支和远端分支存在追踪关系，那么本地分支和远端分支都可以省略. <strong><em>git push origin</em></strong>.</p></li>
+
+<li><p>如果当前分支只有一个追踪分支，那么主机名可以省略. <strong><em>git push</em></strong>.</p></li>
+
+<li><p>当使用 <strong><em>git push</em></strong> 去推送分支到远端的时候，在git 2.0之后采用 ‘simple’ 方法，就是只推送当前的分支，另外一种推送的方法叫做 ‘matching’,会将本地所有有关联关系的分支推送到默认的远端主机上去.可以通过 <strong><em>git config &ndash;global push.default matching</em></strong> 指令来设置.</p></li>
+
+<li><p>显示当前远程分支的详细信息。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">git remote -v</pre></td></tr></table>
+</div>
+</div></li>
+</ol>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">shengli</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2019-12-01
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/git/">git</a>
+          <a href="/tags/git-command/">git command</a>
+          <a href="/tags/notes/">notes</a>
+          <a href="/tags/tech/">tech</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/essay/essay/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Markdown使用笔记</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/example/hidden-post/">
+            <span class="next-text nav-default">This is a hidden post.</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://github.com/shenglig" class="iconfont icon-github" title="github"></a>
+  <a href="https://sscode.top/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">shengli</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

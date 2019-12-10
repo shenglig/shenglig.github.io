@@ -13,10 +13,10 @@
     
     <item>
       <title>Markdown使用笔记</title>
-      <link>https://sscode.top/post/2019-12/essay/</link>
+      <link>https://sscode.top/post/essay/essay/</link>
       <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://sscode.top/post/2019-12/essay/</guid>
+      <guid>https://sscode.top/post/essay/essay/</guid>
       <description>Essay one How to write markdow with vim Learn five markdown syntax. Install vim-markdown plugin. Prepare one github repository for saving your markdown notebook. Write first markdown notebook, and push to github. Five markdowm grammar Header Use 1-6 hash characters at the start of the line, corresponding to header levels 1-6 . For Example: 1 2 3 # Header1 ## Header2 ###### Header6 Blockquotes Can only put &amp;gt; before the</description>
     </item>
     
